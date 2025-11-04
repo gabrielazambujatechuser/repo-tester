@@ -1,0 +1,16 @@
+name: Intentional CI failure
+on:
+  pull_request:
+    types: [opened, synchronize, reopened]
+
+jobs:
+  fail_now:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Intentionally fail
+        run: |
+          echo "This CI run is intentionally failing for test purposes"
+          exit 1
