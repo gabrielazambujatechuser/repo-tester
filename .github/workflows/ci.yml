@@ -12,5 +12,5 @@ jobs:
 
       - name: Intentionally fail
         run: |
-          echo "This CI run is intentionally failing for test purposes"
+          echo "This CI run is intentionally failing for test purposes.."
           exit 1
